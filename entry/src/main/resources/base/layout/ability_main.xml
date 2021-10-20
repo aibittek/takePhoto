@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DirectionalLayout
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:height="match_parent"
+    ohos:width="match_parent"
+    ohos:alignment="center"
+    ohos:orientation="vertical">
+
+    <Image
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:image_src="$media:ic_camera_head"
+        ohos:scale_mode="stretch"
+        ohos:weight="3"/>
+
+    <DirectionalLayout
+        ohos:id="$+id:surface_container"
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:background_element="#000000"
+        ohos:weight="29"/>
+
+    <Image
+        ohos:id="$+id:foot"
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:image_src="$media:ic_camera_foot"
+        ohos:scale_mode="stretch"
+        ohos:weight="3"/>
+
+    <DirectionalLayout
+        ohos:height="0vp"
+        ohos:width="match_parent"
+        ohos:background_element="#000000"
+        ohos:bottom_padding="30vp"
+        ohos:layout_alignment="vertical_center"
+        ohos:left_padding="30vp"
+        ohos:orientation="horizontal"
+        ohos:right_padding="30vp"
+        ohos:weight="6">
+
+        <Image
+            ohos:id="$+id:tack_photo_btn"
+            ohos:height="match_content"
+            ohos:width="0vp"
+            ohos:enabled="true"
+            ohos:image_src="$media:ic_camera_photo"
+            ohos:layout_alignment="center"
+            ohos:scale_mode="zoom_center"
+            ohos:weight="1"/>
+    </DirectionalLayout>
+
+</DirectionalLayout>

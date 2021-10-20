@@ -1,0 +1,39 @@
+apply plugin: 'com.huawei.ohos.hap'
+apply plugin: 'com.huawei.ohos.decctest'
+//For instructions on signature configuration, see https://developer.harmonyos.com/cn/docs/documentation/doc-guides/ide_debug_device-0000001053822404#ZH-CN_TOPIC_0000001154985555__section1112183053510
+ohos {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\aibit\\.ohos\\config\\auto_debug_70086000164790446.p12')
+            storePassword '000000180EB74FA7CCD54B4ED3B2142DAE04AC6779E3FB67AFC9F14CB5DA1A916E3CCBD2BFA4C704'
+            keyAlias = 'debugKey'
+            keyPassword '00000018CC51C7A1674E9BC7446FCBC55ACF791FCB24F18AE103862421B4F1303402FEA07D3CA12F'
+            signAlg = 'SHA256withECDSA'
+            profile file('C:\\Users\\aibit\\Desktop\\debugDebug.p7b')
+            certpath file('C:\\Users\\aibit\\.ohos\\config\\auto_debug_70086000164790446.cer')
+        }
+    }
+    compileSdkVersion 5
+    defaultConfig {
+        compatibleSdkVersion 4
+    }
+    buildTypes {
+        release {
+            proguardOpt {
+                proguardEnabled false
+                rulesFiles 'proguard-rules.pro'
+            }
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.har'])
+    implementation 'org.jetbrains:annotations:19.0.0'
+    testImplementation 'junit:junit:4.13'
+    ohosTestImplementation 'com.huawei.ohos.testkit:runner:1.0.0.100'
+}
+decc {
+    supportType = ['html', 'xml']
+}
